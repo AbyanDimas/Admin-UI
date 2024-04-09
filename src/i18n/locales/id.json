@@ -1,0 +1,177 @@
+{
+  "auth": {
+    "agree": "Saya setuju dengan",
+    "createAccount": "Buat akun",
+    "createNewAccount": "Buat Akun Baru",
+    "email": "Email",
+    "login": "Masuk",
+    "password": "Kata sandi",
+    "recover_password": "Pulihkan kata sandi",
+    "sign_up": "Daftar",
+    "keep_logged_in": "Biarkan saya tetap masuk",
+    "termsOfUse": "Syarat Penggunaan.",
+    "reset_password": "Atur ulang kata sandi"
+  },
+  "404": {
+    "title": "Halaman ini sedang istirahat.",
+    "text": "Jika Anda merasa ini tidak benar, silakan kirim pesan kepada kami di ",
+    "back_button": "Kembali ke dasbor"
+  },
+  "typography": {
+    "primary": "Gaya teks utama",
+    "secondary": "Gaya teks sekunder"
+  },
+  "dashboard": {
+    "versions": "Versi",
+    "setupRemoteConnections": "Atur Koneksi Jarak Jauh",
+    "currentVisitors": "Pengunjung Saat Ini",
+    "navigationLayout": "tata letak navigasi",
+    "topBarButton": "Bar Atas",
+    "sideBarButton": "Bar Samping"
+  },
+  "language": {
+    "brazilian_portuguese": "Portugis",
+    "english": "Inggris",
+    "spanish": "Spanyol",
+    "simplified_chinese": "Tionghoa Sederhana",
+    "persian": "Persia"
+  },
+  "menu": {
+    "auth": "Otentikasi",
+    "buttons": "Tombol",
+    "timelines": "Kronologis",
+    "dashboard": "Dashboard",
+    "billing": "Penagihan",
+    "login": "Masuk",
+    "preferences": "Preferensi akun",
+    "payments": "Pembayaran",
+    "settings": "Pengaturan aplikasi",
+    "pricing-plans": "Rencana harga",
+    "payment-methods": "Metode pembayaran",
+    "signup": "Daftar",
+    "recover-password": "Pulihkan kata sandi",
+    "recover-password-email": "Email pulihkan kata sandi",
+    "404": "404",
+    "faq": "FAQ",
+    "users": "Pengurus OSIS",
+    "projects": "Program Kerja"
+  },
+  "messages": {
+    "all": "Lihat semua pesan",
+    "new": "Pesan baru dari {name}",
+    "mark_as_read": "Tandai sebagai sudah dibaca"
+  },
+  "navbar": {
+    "messageUs": "Pertanyaan pengembangan web:",
+    "repository": "Repositori GitHub"
+  },
+  "notifications": {
+    "all": "Lihat semua notifikasi",
+    "less": "Lihat lebih sedikit notifikasi",
+    "mark_as_read": "Tandai sebagai sudah dibaca",
+    "sentMessage": "mengirimkan pesan kepada Anda",
+    "uploadedZip": "mengunggah file Zip baru dengan {type}",
+    "startedTopic": "memulai topik baru"
+  },
+  "user": {
+    "language": "Ubah bahasa",
+    "logout": "Keluar",
+    "profile": "Profil",
+    "settings": "Pengaturan",
+    "billing": "Penagihan",
+    "faq": "FAQ",
+    "helpAndSupport": "Bantuan & dukungan",
+    "projects": "Proyek",
+    "account": "Akun",
+    "explore": "Jelajahi"
+  },
+  "treeView": {
+    "basic": "Dasar",
+    "icons": "Ikon",
+    "selectable": "Dapat dipilih",
+    "editable": "Dapat diedit",
+    "advanced": "Tingkat lanjut"
+  },
+  "chat": {
+    "title": "Obrolan",
+    "sendButton": "Kirim"
+  },
+  "spacingPlayground": {
+    "value": "Nilai",
+    "margin": "Margin",
+    "padding": "Padding"
+  },
+  "spacing": {
+    "title": "Spasi"
+  },
+  "cards": {
+    "cards": "Kartu",
+    "fixed": "Tetap",
+    "floating": "Melayang",
+    "contentText": "Garis-garis unik zebra membuat mereka menjadi salah satu hewan yang paling dikenal oleh orang.",
+    "contentTextLong": "Garis-garis unik zebra membuat mereka menjadi salah satu hewan yang paling dikenal oleh orang. Mereka hidup di berbagai habitat, seperti padang rumput, savana, hutan, semak belukar berduri, pegunungan, dan bukit pantai. Berbagai faktor antropogenik telah memiliki dampak serius terhadap populasi zebra, khususnya pemburuan untuk kulit dan kerusakan habitat. Zebra Grévy dan zebra gunung terancam punah. Sementara zebra dataran jauh lebih banyak, satu subspesies, quagga.",
+    "rowHeight": "Tinggi baris",
+    "title": {
+      "default": "Default",
+      "withControls": "Dengan kontrol",
+      "customHeader": "Header kustom",
+      "withoutHeader": "Tanpa header",
+      "withImage": "Dengan Gambar",
+      "withTitleOnImage": "Dengan judul pada gambar",
+      "withCustomTitleOnImage": "Dengan judul kustom pada gambar",
+      "withStripe": "Dengan garis",
+      "withBackground": "Dengan latar belakang"
+    },
+    "button": {
+      "main": "Utama",
+      "cancel": "Batal",
+      "showMore": "Tampilkan Lebih Banyak",
+      "readMore": "Tampilkan Lebih Banyak"
+    },
+    "link": {
+      "edit": "Edit",
+      "setAsDefault": "Atur sebagai default",
+      "delete": "Hapus",
+      "traveling": "Perjalanan",
+      "france": "Perancis",
+      "review": "Ulasan",
+      "feedback": "Tinggalkan umpan balik",
+      "readFull": "Baca artikel lengkap",
+      "secondaryAction": "Tindakan sekunder",
+      "action1": "Tindakan 1",
+      "action2": "Tindakan 2"
+    }
+  },
+  "colors": {
+    "themeColors": "Warna Tema",
+    "extraColors": "Warna Tambahan",
+    "gradients": {
+      "basic": {
+        "title": "Gradien Tombol"
+      },
+      "hovered": {
+        "title": "Gradien Tombol yang Dihover",
+        "text": "Mencerahkan 15% yang diterapkan pada gaya asli (gradien atau warna datar) untuk status hover."
+      },
+      "pressed": {
+        "title": "Gradien Tombol yang Ditekan",
+        "text": "Menggelapkan 15% yang diterapkan pada gaya asli (gradien atau warna datar) untuk status ditekan."
+      }
+    }
+  },
+  "tabs": {
+    "alignment": "Penyelarasan Tab",
+    "overflow": "Overflow Tab",
+    "hidden": "Tab dengan slider tersembunyi",
+    "grow": "Tab tumbuh"
+  },
+  "helpAndSupport": "Bantuan & dukungan",
+  "aboutVuesticAdmin": "Tentang Vuestic Admin",
+  "search": {
+    "placeholder": "Cari..."
+  },
+  "buttonSelect": {
+    "dark": "Gelap",
+    "light": "Terang"
+  }
+}
