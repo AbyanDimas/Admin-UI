@@ -4,6 +4,7 @@ import AuthLayout from '../layouts/AuthLayout.vue'
 import AppLayout from '../layouts/AppLayout.vue'
 
 import RouteViewComponent from '../layouts/RouterBypass.vue'
+import { isAuthenticated } from '../pages/auth/Auth'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,41 +21,97 @@ const routes: Array<RouteRecordRaw> = [
         name: 'dashboard',
         path: 'dashboard',
         component: () => import('../pages/admin/dashboard/Dashboard.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'settings',
         path: 'settings',
         component: () => import('../pages/settings/Settings.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'preferences',
         path: 'preferences',
         component: () => import('../pages/preferences/Preferences.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'users',
         path: 'users',
         component: () => import('../pages/users/UsersPage.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'forms',
         path: 'forms',
         component: () => import('../pages/blogs/forms.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'peringatan',
         path: 'peringatan',
         component: () => import('../pages/blogs/peringatan.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'berita',
         path: 'berita',
         component: () => import('../pages/blogs/berita.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'projects',
         path: 'projects',
         component: () => import('../pages/projects/ProjectsPage.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
       {
         name: 'payments',
@@ -65,16 +122,37 @@ const routes: Array<RouteRecordRaw> = [
             name: 'payment-methods',
             path: 'payment-methods',
             component: () => import('../pages/payments/PaymentsPage.vue'),
+            beforeEnter: (to, from, next) => {
+              if (isAuthenticated()) {
+                next()
+              } else {
+                next({ name: 'login' })
+              }
+            },
           },
           {
             name: 'billing',
             path: 'billing',
             component: () => import('../pages/billing/BillingPage.vue'),
+            beforeEnter: (to, from, next) => {
+              if (isAuthenticated()) {
+                next()
+              } else {
+                next({ name: 'login' })
+              }
+            },
           },
           {
             name: 'pricing-plans',
             path: 'pricing-plans',
             component: () => import('../pages/pricing-plans/PricingPlans.vue'),
+            beforeEnter: (to, from, next) => {
+              if (isAuthenticated()) {
+                next()
+              } else {
+                next({ name: 'login' })
+              }
+            },
           },
         ],
       },
@@ -82,6 +160,13 @@ const routes: Array<RouteRecordRaw> = [
         name: 'faq',
         path: '/faq',
         component: () => import('../pages/faq/FaqPage.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
       },
     ],
   },
@@ -128,7 +213,6 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     }
-    // For some reason using documentation example doesn't scroll on page navigation.
     if (to.hash) {
       return { el: to.hash, behavior: 'smooth' }
     } else {

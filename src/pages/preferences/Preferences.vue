@@ -11,6 +11,7 @@
   <EditNameModal v-if="isEditNameModalOpen" @cancel="isEditNameModalOpen = false" />
   <ResetPasswordModal v-if="isResetPasswordModalOpen" @cancel="isResetPasswordModalOpen = false" />
 </template>
+
 <script lang="ts" setup>
 import { ref } from 'vue'
 

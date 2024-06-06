@@ -11,7 +11,7 @@
     <VaForm ref="form" class="space-y-6" @submit.prevent="submit">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <VaInput
-          v-model="oldPassowrd"
+          v-model="oldPassword"
           :rules="oldPasswordRules"
           label="Old password"
           placeholder="Old password"
@@ -57,15 +57,16 @@
     </VaForm>
   </VaModal>
 </template>
+
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useForm, useToast } from 'vuestic-ui'
-
+import { resetPassword } from '../../auth/Auth' // Import resetPassword function
 import { buttonStyles } from '../styles'
 
-const oldPassowrd = ref<string>()
-const newPassword = ref<string>()
-const repeatNewPassword = ref<string>()
+const oldPassword = ref<string>('')
+const newPassword = ref<string>('')
+const repeatNewPassword = ref<string>('')
 
 const { validate } = useForm('form')
 const { init } = useToast()
@@ -74,7 +75,11 @@ const emits = defineEmits(['cancel'])
 
 const submit = () => {
   if (validate()) {
-    init({ message: "You've successfully changed your password", color: 'success' })
+    if (resetPassword(oldPassword.value, newPassword.value)) {
+      init({ message: "You've successfully changed your password", color: 'success' })
+    } else {
+      init({ message: 'Old password is incorrect', color: 'error' })
+    }
     emits('cancel')
   }
 }
@@ -85,7 +90,7 @@ const newPasswordRules = [
   (v: string) => !!v || 'New password field is required',
   (v: string) => v?.length >= 8 || 'Must be at least 8 characters long',
   (v: string) => new Set(v).size >= 6 || 'Must contain at least 6 unique characters',
-  (v: string) => v !== oldPassowrd.value || 'New password cannot be the same',
+  (v: string) => v !== oldPassword.value || 'New password cannot be the same',
 ]
 
 const repeatNewPasswordRules = [

@@ -38,14 +38,16 @@
     <div class="flex justify-center mt-4">
       <VaButton class="w-full" @click="submit"> Login</VaButton>
     </div>
+    <div v-if="error" class="error">{{ error }}</div>
   </VaForm>
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useForm, useToast } from 'vuestic-ui'
 import { validators } from '../../services/utils'
+import { login } from '../auth/Auth'
 
 const { validate } = useForm('form')
 const { push } = useRouter()
@@ -57,10 +59,23 @@ const formData = reactive({
   keepLoggedIn: false,
 })
 
+const error = ref<string | null>(null)
+
 const submit = () => {
   if (validate()) {
-    init({ message: 'Anda berhasil login', color: 'success' })
-    push({ name: 'dashboard' })
+    const success = login(formData.email, formData.password)
+    if (success) {
+      init({ message: 'Anda berhasil login', color: 'success' })
+      push({ name: 'dashboard' })
+    } else {
+      error.value = 'Username atau password salah'
+    }
   }
 }
 </script>
+
+<style scoped>
+.error {
+  color: red;
+}
+</style>
