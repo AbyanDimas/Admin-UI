@@ -11,17 +11,14 @@ import NotFoundImage from '../components/NotFoundImage.vue'
 
     <div class="flex flex-col items-center gap-6 px-4 my-8">
       <NotFoundImage />
-      <h1 class="va-h1 text-center sm:text-5xl text-4xl">Page not found</h1>
+      <h1 class="va-h1 text-center sm:text-5xl text-4xl">Halaman Tidak Di Temukan</h1>
 
       <p class="text-center">
-        The page you are looking for might have been removed had its name changed or is temporarily unavailable.
+        Halaman yang Anda cari mungkin telah dihapus karena namanya diubah atau untuk sementara tidak tersedia.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4">
-        <VaButton to="/">Go to homepage</VaButton>
-        <VaButton href="https://github.com/epicmaxco/vuestic-admin/issues/new" preset="secondary" target="_blank"
-          >Create a GitHub issue
-        </VaButton>
+        <VaButton to="/">Kembali Ke Halaman Utama</VaButton>
       </div>
     </div>
 

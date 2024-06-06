@@ -67,11 +67,11 @@ export default {
         },
         {
           name: 'berita',
-          displayName: 'Berita',
+          displayName: 'Tambahkan Berita',
         },
         {
           name: 'peringatan',
-          displayName: 'Peringatan',
+          displayName: 'Tambahkan Peringatan',
         },
       ],
     },

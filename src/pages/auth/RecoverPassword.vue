@@ -2,8 +2,8 @@
   <VaForm ref="passwordForm" @submit.prevent="submit">
     <h1 class="font-semibold text-4xl mb-4">Forgot your password?</h1>
     <p class="text-base mb-4 leading-5">
-      If you've forgotten your password, don't worry. Simply enter your email address below, and we'll send you an email
-      with a temporary password. Restoring access to your account has never been easier.
+      Jika Anda lupa kata sandi, jangan khawatir. Cukup masukkan alamat email Anda di bawah ini, dan kami akan
+      mengirimkan email kepada Anda dengan kata sandi sementara. Memulihkan akses ke akun Anda tidak pernah semudah ini.
     </p>
     <VaInput
       v-model="email"
