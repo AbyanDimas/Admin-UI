@@ -114,6 +114,18 @@ const routes: Array<RouteRecordRaw> = [
         },
       },
       {
+        name: 'pengunjung',
+        path: 'pengunjung',
+        component: () => import('../pages/visitor/pengunjung.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
+      },
+      {
         name: 'payments',
         path: '/payments',
         component: RouteViewComponent,

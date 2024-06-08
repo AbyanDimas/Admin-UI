@@ -54,7 +54,8 @@
     "404": "404",
     "faq": "FAQ",
     "users": "Pengurus OSIS",
-    "projects": "Program Kerja"
+    "projects": "Program Kerja",
+    "visitor": "Jumlah Pengunjung"
   },
   "messages": {
     "all": "Lihat semua pesan",

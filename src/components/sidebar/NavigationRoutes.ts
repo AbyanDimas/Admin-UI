@@ -97,7 +97,13 @@ export default {
         },
       ],
     },
-
+    {
+      name: 'pengunjung',
+      displayName: 'menu.visitor',
+      meta: {
+        icon: 'visibility',
+      },
+    },
     {
       name: 'faq',
       displayName: 'menu.faq',
