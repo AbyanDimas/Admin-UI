@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Add your HTML content here -->
-    <p>This is the content of peringatan.vue</p>
+    <p>This is the content of profil.vue</p>
   </div>
 </template>
 

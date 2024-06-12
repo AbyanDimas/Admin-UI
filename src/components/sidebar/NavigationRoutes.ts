@@ -70,8 +70,20 @@ export default {
           displayName: 'Tambahkan Berita',
         },
         {
-          name: 'peringatan',
-          displayName: 'Tambahkan Peringatan',
+          name: 'tentang',
+          displayName: 'Edit Tentang',
+        },
+        {
+          name: 'beranda',
+          displayName: 'Edit Beranda',
+        },
+        {
+          name: 'kontak',
+          displayName: 'Edit Kontak',
+        },
+        {
+          name: 'profil',
+          displayName: 'Edit Profil',
         },
       ],
     },

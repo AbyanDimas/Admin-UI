@@ -78,9 +78,45 @@ const routes: Array<RouteRecordRaw> = [
         },
       },
       {
-        name: 'peringatan',
-        path: 'peringatan',
-        component: () => import('../pages/blogs/peringatan.vue'),
+        name: 'tentang',
+        path: 'tentang',
+        component: () => import('../pages/blogs/about.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
+      },
+      {
+        name: 'beranda',
+        path: 'beranda',
+        component: () => import('../pages/blogs/beranda.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
+      },
+      {
+        name: 'kontak',
+        path: 'kontak',
+        component: () => import('../pages/blogs/kontak.vue'),
+        beforeEnter: (to, from, next) => {
+          if (isAuthenticated()) {
+            next()
+          } else {
+            next({ name: 'login' })
+          }
+        },
+      },
+      {
+        name: 'profil',
+        path: 'profil',
+        component: () => import('../pages/blogs/profil.vue'),
         beforeEnter: (to, from, next) => {
           if (isAuthenticated()) {
             next()
