@@ -69,6 +69,16 @@ export default {
           name: 'berita',
           displayName: 'Tambahkan Berita',
         },
+      ],
+    },
+
+    {
+      name: 'settings',
+      displayName: 'Ubah Halaman',
+      meta: {
+        icon: 'public',
+      },
+      children: [
         {
           name: 'tentang',
           displayName: 'Edit Tentang',
@@ -87,6 +97,28 @@ export default {
         },
       ],
     },
+
+    {
+      name: 'pengunjung',
+      displayName: 'menu.visitor',
+      meta: {
+        icon: 'visibility',
+      },
+    },
+    // {
+    //   name: 'faq',
+    //   displayName: 'menu.faq',
+    //   meta: {
+    //     icon: 'quiz',
+    //   },
+    // },
+    // {
+    //   name: '404',
+    //   displayName: 'menu.404',
+    //   meta: {
+    //     icon: 'vuestic-iconset-files',
+    //   },
+    // },
 
     {
       name: 'auth',
@@ -109,27 +141,7 @@ export default {
         },
       ],
     },
-    {
-      name: 'pengunjung',
-      displayName: 'menu.visitor',
-      meta: {
-        icon: 'visibility',
-      },
-    },
-    {
-      name: 'faq',
-      displayName: 'menu.faq',
-      meta: {
-        icon: 'quiz',
-      },
-    },
-    {
-      name: '404',
-      displayName: 'menu.404',
-      meta: {
-        icon: 'vuestic-iconset-files',
-      },
-    },
+
     {
       name: 'preferences',
       displayName: 'menu.preferences',
