@@ -81,19 +81,19 @@ export default {
       children: [
         {
           name: 'tentang',
-          displayName: 'Edit Tentang',
+          displayName: 'Rubah Halaman Tentang',
         },
         {
           name: 'beranda',
-          displayName: 'Edit Beranda',
+          displayName: 'Rubah Halaman Beranda',
         },
         {
           name: 'kontak',
-          displayName: 'Edit Kontak',
+          displayName: 'Rubah Halaman Kontak',
         },
         {
           name: 'profil',
-          displayName: 'Edit Profil',
+          displayName: 'Rubah Halaman Profil',
         },
       ],
     },

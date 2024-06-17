@@ -1,50 +1,60 @@
 <template>
-  <div>
-    <h1 class="page-title">Hasil Kotak Saran</h1>
-    <div v-if="suggestions.length === 0" class="no-suggestions">Belum ada saran yang diterima.</div>
-    <ul v-else>
-      <li v-for="(suggestion, index) in suggestions" :key="index">
-        {{ suggestion }}
-      </li>
-    </ul>
-  </div>
+  <VaPage>
+    <VaCard>
+      <VaCardTitle> Hasil Kotak Saran </VaCardTitle>
+      <VaCardContent>
+        <VaDataTable :items="suggestions" :columns="columns" :filter="filter" />
+        <VaInput v-model="filter" placeholder="Cari saran..." class="mb-4" />
+      </VaCardContent>
+    </VaCard>
+  </VaPage>
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref, onMounted } from 'vue'
+import axios from 'axios'
+import { VaCard, VaCardTitle, VaCardContent, VaDataTable, VaInput } from 'vuestic-ui'
+
+export default defineComponent({
+  name: 'HasilKotakSaran',
+  components: {
+    VaCard,
+    VaCardTitle,
+    VaCardContent,
+    VaDataTable,
+    VaInput,
+  },
+  setup() {
+    const suggestions = ref([])
+    const filter = ref('')
+    const columns = ref([
+      { key: 'name', label: 'Nama Pengirim' },
+      { key: 'date', label: 'Tanggal' },
+      { key: 'suggestion', label: 'Saran' },
+    ])
+
+    const fetchSuggestions = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/api/suggestions')
+        suggestions.value = response.data
+      } catch (error) {
+        console.error('Error fetching suggestions:', error)
+      }
+    }
+
+    onMounted(fetchSuggestions)
+
     return {
-      suggestions: [],
+      suggestions,
+      columns,
+      filter,
     }
   },
-  created() {
-    this.loadSuggestions()
-  },
-  methods: {
-    async loadSuggestions() {
-      try {
-        const response = await fetch('http://localhost:5002/get-suggestions')
-        if (response.ok) {
-          const data = await response.json()
-
-          this.suggestions = data.suggestions
-        } else {
-          throw new Error('Gagal mendapatkan daftar saran.')
-        }
-      } catch (error) {
-        console.error('Terjadi kesalahan:', error)
-      }
-    },
-  },
-}
+})
 </script>
 
 <style scoped>
-.no-suggestions {
-  background-color: red;
-  color: white;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+.mb-4 {
+  margin-bottom: 1rem;
 }
 </style>
