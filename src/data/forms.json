@@ -1,0 +1,20 @@
+{
+    "suggestions": [
+      {
+        "name": "John Doe",
+        "date": "2024-06-01",
+        "suggestion": "Improve the user interface."
+      },
+      {
+        "name": "Jane Smith",
+        "date": "2024-06-02",
+        "suggestion": "Add more tutorials."
+      },
+      {
+        "name": "Alice Johnson",
+        "date": "2024-06-03",
+        "suggestion": "Increase the website speed."
+      }
+    ]
+  }
+  
